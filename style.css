@@ -14,11 +14,11 @@ body {
 
 #btnToTop {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     background-color: #8d7960;
     color: #fff;
-    padding: 15px;
+    padding: 3px;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -246,6 +246,11 @@ section.Procedimentos{
     width: 100vh;
     height: 100%;
   }
+  .Procedimentos-box h2 {
+     display: flex;
+     align-items: center;
+
+  }
   .Procedimentos-box p{
     color:#927c69;
     font-size: 18px;
@@ -282,7 +287,8 @@ section.sobre {
     padding: 80px 4%;
 }
 
-section.sobre .flex {
+section.sobre .flex-sobre {
+    display: flex;
     align-items: center;
     gap: 60px;
 }
@@ -507,4 +513,52 @@ footer .btn-social{
 
     font-style: italic;
     font-weight: bold;
+}
+@media screen and (max-width: 1000px) {
+      /*classes gerais*/
+      .flex {
+        flex-direction: column-reverse;
+      }
+       .Procedimentos h2, .Procedimentos-box {
+        display: none;
+       }
+        
+       .img-sobre img {
+        
+        height: 500px;
+        width: auto;
+      }
+      .sobre .flex-sobre {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+      }
+        
+       /*cabeçalho*/
+    .menu-desktop , .btn-contato {
+        display: none;
+    }
+    #btnToTop {
+       width: 10%;
+      
+    }
+    .doutores , .doutor , .linha {
+        flex-direction: column;
+    }
+    .logo-footer {
+        padding-left: 80px;
+    }
+    .btn-social {
+        padding-left: 80px;
+        gap: 30px;
+    }
+
+    .localiza iframe {
+        width: 200px;
+        height: auto;
+    }
+    .localiza img {
+        height: 150px;
+        width: auto;
+    }
 }
